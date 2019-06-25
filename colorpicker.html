@@ -17,14 +17,28 @@
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+      <script>
+        function randomColor() {
+          var red = Math.floor(Math.random() * 256);
+          var green = Math.floor(Math.random() * 256);
+          var blue = Math.floor(Math.random() * 256);
 
+          var divtoedit = document.getElementById( 'pickacolor');
+          divtoedit.style.backgroundColor = 'rgb('+red+','+green+','+blue+')';
+
+          document.getElementById('colorGenerated').innerHTML = 'rgb('+red+','+green+','+blue+')';
+
+
+
+        }
+      </script>
 </head>
 <body>
 
  <div class="container-fluid">
    <div class="row">
      <div class="col-sm-12">
-       About Nona
+       <span id="title">About Nona</span>
      </div>
    </div>
  </div>
@@ -32,8 +46,54 @@
   <div class=row>
     <div class="col-sm-12">
       <img id=coverimage src="imgs/coverimage.jpg" alt="The Cliffs of Moher">
+      </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="halfrow">
+        My favorite number: <br/>
+        24
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="halfrow">
+        My favorite musical is: Matilda<br/>
+        <a href="https://www.youtube.com/watch?v=CI7JwIIr0pA&list=PLPPRtvSP8agVEiyjUFmwisvqXxysJeLRK">Matilda the Musical Soundtrack</a>
+
+      </div>
+   </div>
+ </div>
+
+
+ <div class="row">
+   <div class="col-sm-2 offset-sm-1 color" id="color1">
+   </div>
+   <div class="col-sm-2 color" id="color2">
+   </div>
+   <div class="col-sm-2 color" id="color3">
+   </div>
+   <div class="col-sm-2 color" id="color4">
+   </div>
+   <div class="col-sm-2 color" id="color5">
+   </div>
+ </div>
+
+ <div class="row">
+   <div class="col-sm-12" id="pickacolor">
+     <button class= "" onclick=randomColor()>
+       Get Random color
+     </button>
+     <br/><br/>
+     <p id="colorGenerated"></p>
+   </div>
+ <div/>
+
+
+
+
 
 
 </body>
